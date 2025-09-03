@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Formulir Pendaftaran</title>
+</head>
+<h1>
+    Formulir Pendaftaran
+</h1>
+<p>Bergabung lah dengan Komusnitas kami</p>
+<form action="server.html">
+    <fieldset>
+        <legend>Informasi Pribadi
+        </legend>
+
+        <label for="name"> name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Masukkan Nama Lengkap">
+        <br>
+        <label for="Email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Contoh@email.com">
+        <br>
+        <label for="phone">password:</label>
+        <input type="text" id="password" name="password" placeholder="Minimal 8 karaketer">
+        <br>
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+        <br>
+        <label for="phone">Nomor hp:</label>
+        <input type="text" id="nomor hp" name="nomor hp">
+    </fieldset>
+</form>
+<form action="server.html">
+    <br>
+    <fieldset>
+        <legend>informasi tambahan</legend>
+        <label for="html">jenis kelamin</label><br>
+          <input type="radio" id="laki-laki" name="fav_language" value="laki-laki">
+          <label for="laki-laki">Laki-laki</label>
+          <input type="radio" id="prempuan" name="fav_language" value="prempuan">
+          <label for="prempuan">Prempuan</label>
+        <br>
+        <label for="provinsi-type">Provinsi:</label>
+        <select id="provinsi-type" name="provinsi-type">
+            <option value="JOGJAKARTA">JOGJAKARTA</option>
+            <option value="BEKASI">BEKASI</option>
+            <option value="RIAU">RIAU</option>
+            <option value="SOLO">SOLO</option>
+            <option value="other">lainnya</option>
+            <br>
+        </select>
+        <br>
+        Hobby : <br />
+        <input type="checkbox" name="hobby" id="JUDO" value="JUDO">
+        <label for="JUDO"> Judo</label>
+        <input type="checkbox" name="hobby" id="wrestling" value="wrestling">
+        <label for="wrestling"> Wrestling</label>
+        <input type="checkbox" name="hobby" id="Boxing" value="Boxing">
+        <label for="Boxing"> Boxing</label>
+        <input type="checkbox" name="hobby" id="Muaythai" value="Muaythai">
+        <label for="Muaythai"> Muaythai</label>
+        <form action="/action_page.php">
+            <label for="w3review">Biodata singkat diri tentang anda:</label>
+            <textarea id="w3review" name="w3review" rows="4" cols="50">Ceritakan sedikit diri anda</textarea>
+            <br>
+            <form action="/action_page.php">
+                <label for="myfile">Upload foto:</label>
+                <input type="file" id="myfile" name="myfile"><br><br>
+                <input type="submit">
+    </fieldset>
+    <input type="checkbox" name="syarat" id="syarat" value="syarat">
+    <label for="syarat"> Saya menyutujui <a href="#">syarat dan ketentuan</a> yang berlaku</label>
+    <br>
+    <form>
+        <input type="button" value="Daftar Sekarang" onclick="alert('Daftar')">
+        <input type="button" value="Reset Form" onclick="alert('form')">
+    </form>
+</form>
+
+</html>
