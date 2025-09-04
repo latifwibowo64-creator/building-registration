@@ -25,9 +25,11 @@
     }
 
     .form {
-        border-radius: 5px;
+        border-radius: 6px;
         border-width: 0;
         background-color: red;
+        color: white;
+        padding: 10px;
     }
 
     .name {
@@ -41,10 +43,11 @@
     .subtitle {
 
         margin-top: 0;
+        color: hsla(0, 12%, 24%, 0.581);
     }
 
     .provinsi {
-        width: 50%;
+        width: 100%;
         border-width: 0;
         border-radius: 3px;
         background-color: rgba(154, 167, 154, 0.337);
@@ -66,9 +69,18 @@
     }
 
     .daftar {
-        border-radius: 5px;
+        border-radius: 6px;
         border-width: 0;
         background-color: green;
+        color: white;
+
+
+    }
+
+    .action {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
 
     .password {
@@ -109,21 +121,21 @@
             </header>
         </div>
         <fieldset>
-            <legend>Informasi Pribadi</legend>
+            <legend><b>Informasi Pribadi</b></legend>
             <form>
                 <div class="form-section">
                     <label for="nama">Nama lengkap Anda:</label>
                 </div>
-                <br>
-                <input type="text" name="nama" id="nama" class="name" />
+
+                <input type="text" name="nama" id="nama" class="name" placeholder="Masukkan nama Lengkap" />
                 <br />
                 <label for="email">Alamat email:</label>
                 <br>
-                <input type="text" name="nama" id="nama" class="input-email" />
+                <input type="text" name="nama" id="nama" class="input-email" placeholder="contoh@gmail.com" />
                 <br />
                 <label for="password">Password:</label>
                 <br>
-                <input type="text" name="password" id="password" class="password">
+                <input type="text" name="password" id="password" class="password" placeholder="Minimal 8 karakter">
                 <br />
                 <label for="tangal-lahir">Tanggal lahir:</label>
                 <br>
@@ -131,12 +143,12 @@
                 <br />
                 <label for="nomor-hp">Nomor HP:</label>
                 <br>
-                <input type="text" name="Nomor" id="nomor" class="number" />
+                <input type="text" name="Nomor" id="nomor" class="number" placeholder="0813-4567-8910" />
                 <br />
             </form>
         </fieldset>
         <fieldset>
-            <legend>Informasi tambahan</legend>
+            <legend><b>Informasi Tambahan</b></legend>
             <form>
                 <label for="jenis-kelamin">Jenis kelamin:</label>
                 <br />
@@ -147,10 +159,13 @@
                 <br /><br>
                 <label for="provinsi">Pilih Provinsi:</label>
                 <select id="provinsi" name="provinsi" class="provinsi">
-                    <option value="Bekasi">Bekasi</option>
+                    <option value="pilih provinsi">Pilih Provinsi</option>
                     <option value="Jogja">Jogja</option>
                     <option value="selatan">Jawa selatan</option>
-                    <option value="tengah">Jawa tengah</option>
+                    <option value="Bandung">Badung</option>
+                    <option value="Sragen">Sragen</option>
+                    <option value="Riau">Riau</option>
+                    <option value="Pekan baru">Pekan baru</option>
                     <option value="other">Lainnya</option>
                 </select>
                 <br />
@@ -168,17 +183,21 @@
                 <textarea id="biodata" name="biodata" rows="5" cols="12px">
                         ceritakan sedikit tentang anda.
                     </textarea>
+                <br>
                 <br />
                 <!--Input upload file-->
                 <label for="foto anda">Unggah foto anda:</label>
                 <input type="file" id="photo" name="photo" accept="image/*" />
         </fieldset>
         <input type="checkbox" name="football" id="football" value="football" />
-        <label for="football">saya menetujui yang berlaku <a href="https://example.com">syarat ketentuan</a></label>
+        <label for="football">saya menetujui <a href="https://example.com">syarat ketentuan</a> yang berlaku </label>
         </form>
         </fieldset>
-        <p>Daftar Sekarang <input type="button" value="Daftar" onclick="alert('Daftar')" class="daftar">
+        <p>Daftar Sekarang
+        <div class="action">
+            <input type="button" value="Daftar sekarang" onclick="alert('Daftar')" class="daftar">
             <input type="button" value="Reset Form" onclick="alert('Resetform')" class="form">
+        </div>
         </p>
     </div>
 </body>
