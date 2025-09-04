@@ -3,79 +3,184 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" />
-    <title>Formulir Pendaftaran</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
 </head>
-<h1>
-    Formulir Pendaftaran
-</h1>
-<p>Bergabung lah dengan Komusnitas kami</p>
-<form action="server.html">
-    <fieldset>
-        <legend>Informasi Pribadi
-        </legend>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #dadde0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
 
-        <label for="name"> name:</label>
-        <input type="text" id="fname" name="fname" placeholder="Masukkan Nama Lengkap">
-        <br>
-        <label for="Email">Email:</label>
-        <input type="text" id="email" name="email" placeholder="Contoh@email.com">
-        <br>
-        <label for="phone">password:</label>
-        <input type="text" id="password" name="password" placeholder="Minimal 8 karaketer">
-        <br>
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday">
-        <br>
-        <label for="phone">Nomor hp:</label>
-        <input type="text" id="nomor hp" name="nomor hp">
-    </fieldset>
-</form>
-<form action="server.html">
-    <br>
-    <fieldset>
-        <legend>informasi tambahan</legend>
-        <label for="html">jenis kelamin</label><br>
-          <input type="radio" id="laki-laki" name="fav_language" value="laki-laki">
-          <label for="laki-laki">Laki-laki</label>
-          <input type="radio" id="prempuan" name="fav_language" value="prempuan">
-          <label for="prempuan">Prempuan</label>
-        <br>
-        <label for="provinsi-type">Provinsi:</label>
-        <select id="provinsi-type" name="provinsi-type">
-            <option value="JOGJAKARTA">JOGJAKARTA</option>
-            <option value="BEKASI">BEKASI</option>
-            <option value="RIAU">RIAU</option>
-            <option value="SOLO">SOLO</option>
-            <option value="other">lainnya</option>
-            <br>
-        </select>
-        <br>
-        Hobby : <br />
-        <input type="checkbox" name="hobby" id="JUDO" value="JUDO">
-        <label for="JUDO"> Judo</label>
-        <input type="checkbox" name="hobby" id="wrestling" value="wrestling">
-        <label for="wrestling"> Wrestling</label>
-        <input type="checkbox" name="hobby" id="Boxing" value="Boxing">
-        <label for="Boxing"> Boxing</label>
-        <input type="checkbox" name="hobby" id="Muaythai" value="Muaythai">
-        <label for="Muaythai"> Muaythai</label>
-        <form action="/action_page.php">
-            <label for="w3review">Biodata singkat diri tentang anda:</label>
-            <textarea id="w3review" name="w3review" rows="4" cols="50">Ceritakan sedikit diri anda</textarea>
-            <br>
-            <form action="/action_page.php">
-                <label for="myfile">Upload foto:</label>
-                <input type="file" id="myfile" name="myfile"><br><br>
-                <input type="submit">
-    </fieldset>
-    <input type="checkbox" name="syarat" id="syarat" value="syarat">
-    <label for="syarat"> Saya menyutujui <a href="#">syarat dan ketentuan</a> yang berlaku</label>
-    <br>
-    <form>
-        <input type="button" value="Daftar Sekarang" onclick="alert('Daftar')">
-        <input type="button" value="Reset Form" onclick="alert('form')">
-    </form>
-</form>
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: 50px;
+    }
+
+    .form {
+        border-radius: 5px;
+        border-width: 0;
+        background-color: red;
+    }
+
+    .name {
+        width: 100%;
+        border-width: 0;
+        border-radius: 3;
+        background-color: rgba(154, 167, 154, 0.337);
+
+    }
+
+    .subtitle {
+
+        margin-top: 0;
+    }
+
+    .provinsi {
+        width: 50%;
+        border-width: 0;
+        border-radius: 3px;
+        background-color: rgba(154, 167, 154, 0.337);
+    }
+
+    .birth-date {
+        width: 100%;
+        border-width: 0;
+        border-radius: 3px;
+        background-color: rgba(154, 167, 154, 0.337);
+    }
+
+    .input-email {
+        width: 100%;
+        border-radius: 3px;
+        border-width: 0;
+        background-color: rgba(154, 167, 154, 0.337);
+
+    }
+
+    .daftar {
+        border-radius: 5px;
+        border-width: 0;
+        background-color: green;
+    }
+
+    .password {
+        width: 100%;
+        border-width: 0;
+        border-radius: 3;
+        background-color: rgba(154, 167, 154, 0.337);
+
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .number {
+        width: 100%;
+        border-width: 0;
+        border-radius: 3;
+        background-color: rgba(154, 167, 154, 0.337);
+
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+
+<body>
+
+    <div class="card">
+        <!-- konten akan di tetap kan di sini -->
+        <div class="header">
+            <header>
+                <h1>Formulir pendaftaran</h1>
+                <p class="subtitle">Bergabunglah dengan komunitas kami</p>
+            </header>
+        </div>
+        <fieldset>
+            <legend>Informasi Pribadi</legend>
+            <form>
+                <div class="form-section">
+                    <label for="nama">Nama lengkap Anda:</label>
+                </div>
+                <br>
+                <input type="text" name="nama" id="nama" class="name" />
+                <br />
+                <label for="email">Alamat email:</label>
+                <br>
+                <input type="text" name="nama" id="nama" class="input-email" />
+                <br />
+                <label for="password">Password:</label>
+                <br>
+                <input type="text" name="password" id="password" class="password">
+                <br />
+                <label for="tangal-lahir">Tanggal lahir:</label>
+                <br>
+                <input type="date" name="birth-date" id="birth-date" class="birth-date" />
+                <br />
+                <label for="nomor-hp">Nomor HP:</label>
+                <br>
+                <input type="text" name="Nomor" id="nomor" class="number" />
+                <br />
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Informasi tambahan</legend>
+            <form>
+                <label for="jenis-kelamin">Jenis kelamin:</label>
+                <br />
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Laki laki</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Perempuan</label>
+                <br /><br>
+                <label for="provinsi">Pilih Provinsi:</label>
+                <select id="provinsi" name="provinsi" class="provinsi">
+                    <option value="Bekasi">Bekasi</option>
+                    <option value="Jogja">Jogja</option>
+                    <option value="selatan">Jawa selatan</option>
+                    <option value="tengah">Jawa tengah</option>
+                    <option value="other">Lainnya</option>
+                </select>
+                <br />
+                hobby:
+                <input type="checkbox" name="Judo" id="Judo" value="Judo" />
+                <label for="Judo">Judo</label>
+                <input type="checkbox" name="Capoera" id="Capoera" value="Capoera" />
+                <label for="Capoera">Capoera</label>
+                <input type="checkbox" name="Boxing" id="Boxing" value="Boxing" />
+                <label for="Boxing">Boxing</label>
+                <input type="checkbox" name="KickBoxing" id="KickBoxing" value="KickBoxing" />
+                <label for="KickBoxing">KickBoxing</label>
+                <br />
+                <label for="biodata">Biodata singkat</label>
+                <textarea id="biodata" name="biodata" rows="5" cols="12px">
+                        ceritakan sedikit tentang anda.
+                    </textarea>
+                <br />
+                <!--Input upload file-->
+                <label for="foto anda">Unggah foto anda:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" />
+        </fieldset>
+        <input type="checkbox" name="football" id="football" value="football" />
+        <label for="football">saya menetujui yang berlaku <a href="https://example.com">syarat ketentuan</a></label>
+        </form>
+        </fieldset>
+        <p>Daftar Sekarang <input type="button" value="Daftar" onclick="alert('Daftar')" class="daftar">
+            <input type="button" value="Reset Form" onclick="alert('Resetform')" class="form">
+        </p>
+    </div>
+</body>
 
 </html>
